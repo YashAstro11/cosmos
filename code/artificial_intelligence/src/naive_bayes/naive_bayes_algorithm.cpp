@@ -1,3 +1,21 @@
+// ### Naive Bayes Classifier Implementation
+
+// This PR adds an implementation of the Naive Bayes classifier with the following features:
+// - Training with Laplace smoothing.
+// - Prediction based on log-probabilities.
+// - Data input from CSV or manual user input.
+// - Model parameters and predictions are displayed.
+
+// ### Time Complexity:
+// - **fit()**: O(n * m) - where `n` is the number of training samples, and `m` is the number of features.
+// - **predict()**: O(t * m * k) - where `t` is the number of test samples, `m` is the number of features, and `k` is the number of classes.
+// - **load_data_from_csv()**: O(n * m) - where `n` is the number of data samples, and `m` is the number of features.
+// - **interactive_input()**: O(n * m) - where `n` is the number of samples, and `m` is the number of features.
+
+// ### Space Complexity:
+// - **fit()**: O(k * m) - where `k` is the number of classes, and `m` is the number of features.
+// - **predict()**: O(t) - where `t` is the number of test samples.
+// - **Data Storage**: O(n * m) for training data, O(t * m) for test data.
 #include <iostream>
 #include <vector>
 #include <set>
